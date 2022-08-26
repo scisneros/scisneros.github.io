@@ -27,7 +27,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('styles', function () {
-    return gulp.src('./scss/styles.scss')
+    return gulp.src('./scss/*.scss')
         .pipe(wait(250))
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(gulp.dest('./css'));
@@ -35,5 +35,5 @@ gulp.task('styles', function () {
 
 gulp.task('watch', function() {
     gulp.watch('./js/scripts.js', gulp.series('scripts'));
-    gulp.watch('./scss/styles.scss', gulp.series('styles'));
+    gulp.watch('./scss/*.scss', gulp.series('styles'));
 });
