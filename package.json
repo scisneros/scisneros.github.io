@@ -1,6 +1,7 @@
 {
   "name": "devportfolio-template",
   "version": "1.2.2",
+  "homepage": "https://scisneros.github.io/",
   "description": "",
   "main": "js/scripts.js",
   "scripts": {
