@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portfolio</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;600;700;800">
+    <script src="https://kit.fontawesome.com/4cb0feb62d.js" crossorigin="anonymous"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/custom-styles.css" rel="stylesheet">
@@ -20,11 +21,11 @@
         <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
     <!-- End #mobile-menu-toggle -->
-    <header>
+    <header class="sticky">
         <div id="mobile-menu-close">
             <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
         </div>
-        <ul id="menu" class="shadow">
+        <ul id="menu">
             <li>
                 <a href="#about">About</a>
             </li>
@@ -38,24 +39,39 @@
                 <a href="#projects">Projects</a>
             </li>
             <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
                 <a href="#contact">Contact</a>
             </li>
         </ul>
     </header>
     <!-- End header -->
 
-    <div id="lead">
+    <div id="lead" class="section">
+        <div id="lead-bg"></div>
         <div id="lead-content">
+            <p class="greeting">Hi, my name is</p>
             <h1>Sebastián Cisneros</h1>
-            <h2>UI/UX-Oriented Software Engineer</h2>
-            <a href="files/Resume-Sebastian-Cisneros.pdf" target="_blank" class="btn-rounded-white">Download Resume</a>
+            <h2>I am a UI/UX-Oriented Software Engineer</h2>
+            <p class="intro">I bring graphic design and user experience to the world of computers</p>
+            <div>
+                <a href="files/Resume-Sebastian-Cisneros.pdf" target="_blank" class="btn-resume">Check my Resume</a>
+            </div>
+            <div class="social">
+                <ul>
+                    <li>
+                        <a href="https://github.com/scisneros" target="_blank"><i class="fa fa-github"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/scisnerosp" target="_blank"><i class="fa fa-linkedin"
+                                aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
+
         <!-- End #lead-content -->
 
-        <div id="lead-overlay"></div>
+        <!-- <div id="lead-overlay"></div> -->
 
         <div id="lead-down">
             <span>
@@ -66,87 +82,141 @@
     </div>
     <!-- End #lead -->
 
-    <div id="about">
+    <div id="about" class="section">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <h2 class="heading">About Me</h2>
+                    <div class="img-wrapper">
+                        <!-- <div class="img-overlay"></div> -->
+                        <img src="images/profile-pic.jpg" alt="Headshot of Sebastián Cisneros." class="img-responsive">
+                    </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-9">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec
-                        eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc justo, finibus
-                        ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.
+                        <i class="fa fa-computer" aria-hidden="true"></i>
+                        I am a <strong>Software Engineer</strong> with formal studies in Computer Science. Since I
+                        discovered that User Experience was a thing, I am commited to <strong>merge the world of
+                            algorithms and developers with the complexity of human interaction and graphic
+                            design</strong>, in order to create solutions hand in hand with real-world users.
                     </p>
+                    <div class="divider"></div>
+                    <p>
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        I'm <strong>proactive</strong>, <strong>outgoing</strong> and <strong>detail-oriented</strong>.
+                        During college I constantly participated in student organizations, teaching and mentoring, where
+                        I learned to work both as a team member and as a leader. I am always looking
+                        for ways to <strong>contribute to my community</strong> while improving my skills in the
+                        process.
+                    </p>
+                    <div class="divider"></div>
+                    <p>
+                        <i class="fa fa-circle-nodes" aria-hidden="true"></i>
+                        I have experience in small and medium sized teams, where I've supplied both the technical and
+                        creative side of the project, and also larger groups where I've helped <strong>bridge the
+                            gap between developers and designers</strong>.
+                    </p>
+                    <div class="divider"></div>
+
                 </div>
             </div>
         </div>
     </div>
     <!-- End #about -->
 
-    <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
+    <div id="experience" class="section section-colored">
+        <h2 class="heading">Professional Experience</h2>
         <div id="experience-timeline">
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p>
+            <div data-date="January - July 2021">
+                <h3>Frontend Developer</h3>
+                <h4>Houm</h4>
+                <p class="company-description">Real-estate marketplace platform.</p>
+                <ul>
+                    <li>Part of the development team for the main homepage, map-based marketplace page and property details page.</li>
+                    <li>Created company-wide CSS guidelines for standardizing code and styles.</li>
+                    <li>Worked side-to-side with the design team to establish the foundations of a design system.</li>
+                    <li>Constant peer code reviews.</li>
+                </ul>
             </div>
 
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p>
+            <div data-date="January - July 2021">
+                <h3>Software Developer</h3>
+                <h4>Airnguru</h4>
+                <p class="company-description">Tech solutions for airlines.</p>
+                <p>Developed an MVP of an automated reactive pricing system.</p>
             </div>
 
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
+            <div data-date="December 2019 - February 2020">
+                <h3>Frontend Developer</h3>
+                <h4>Nutrifit</h4>
+                <span class="intern">(Intern)</span>
+                <p class="company-description">Nutrition and fitness consulting.</p>
+                <ul>
+                    <li>Created a fully-customized platform for kinesiologist to manage the creation and logging of
+                        personalized workout plans.</li>
+                    <li>Designed and validated said platform with direct interviews to end users.</li>
+                </ul>
+            </div>
+
+            <div data-date="January - October 2019">
+                <h3>UI/UX Designer and Frontend Developer</h3>
+                <h4>Clapclapp</h4>
+                <p class="company-description">Professional network for performance artists.</p>
+                <ul>
+                    <li>Complete UI design, including homepage, guided signup wizard and profile page with gamification
+                        components.</li>
+                    <li>Part of the development and validation of said interfaces.</li>
+                    <li>Participation in the first stages of the company as a startup.</li>
+                </ul>
+            </div>
+
+            <div data-date="January 2017 - April 2018">
+                <h3>Frontend Developer</h3>
+                <h4>Lazarillo</h4>
+                <p class="company-description">Tech solutions for people with visual impairment.</p>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                    Developed users landing page, enterprises services landing page and a news blog, with particular
+                    focus on accessibility for blind or visually impaired users.
                 </p>
             </div>
         </div>
     </div>
     <!-- End #experience -->
 
-    <div id="education">
+    <div id="education" class="section">
         <h2 class="heading">Education</h2>
         <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
+            <h3>Computer Science and Engineering</h3>
+            <span class="education-date">2022</span>
+            <h4>Universidad de Chile</h4>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                Six-year degree, consisting of two years of common science foundations in physics and mathematics, plus
+                four years of theoretical computer science and practical software engineering.
             </p>
         </div>
         <!-- End .education-block -->
 
+        <h2 class="heading">Certification</h2>
         <div class="education-block">
-            <h3>University of Ottawa</h3>
-            <span class="education-date">Sept 2016 - Sept 2017</span>
-            <h4>Bachelor of Science in Computer Science</h4>
+            <h3>UX Certification - Interaction Design Specialty</h3>
+            <span class="education-date">2021</span>
+            <h4>Nielsen Norman Group</h4>
+            <p>
+                NN Group is a global leader and pioneer in research-based user experience consulting. I took their certification program with the following courses:
+            </p>
             <ul>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
-                <li>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </li>
+                <li>Web Page UX Design</li>
+                <li>The Human Mind and Usability</li>
+                <li>Mobile User Experience</li>
+                <li>Emerging Patterns in Interface Design</li>
+                <li>UX Deliverables</li>
             </ul>
+            <img src="images/UX-Certified-NNg.png" alt="Nielsen Norman Group UX Certificate Badge">
         </div>
-        <!-- End .education-block -->
     </div>
     <!-- End #education -->
 
-    <div id="projects" class="background-alt">
+    <div id="projects" class="section">
         <h2 class="heading">Projects</h2>
         <div class="container">
             <div class="row">
@@ -158,7 +228,9 @@
                     <div class="project-info">
                         <h3>Project Name Here</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam
+                            volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce
+                            eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
                         </p>
                         <a href="#">View Project</a>
                     </div>
@@ -174,7 +246,9 @@
                     <div class="project-info">
                         <h3>Project Name Here</h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam
+                            volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce
+                            eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
                         </p>
                         <a href="#">View Project</a>
                     </div>
@@ -185,8 +259,8 @@
         </div>
     </div>
     <!-- End #projects -->
-
-    <div id="skills">
+<!-- 
+    <div id="skills" class="section">
         <h2 class="heading">Skills</h2>
         <ul>
             <li>JavaScript</li>
@@ -217,10 +291,12 @@
             <li>Ruby on Rails</li>
         </ul>
     </div>
+     -->
     <!-- End #skills -->
 
-    <div id="contact">
+    <div id="contact" class="section">
         <h2>Get in Touch</h2>
+        <p>I'm currently open to work. Contact me.</p>
         <div id="contact-form">
             <form method="POST" action="https://formspree.io/email@email.com">
                 <input type="hidden" name="_subject" value="Contact request from personal website" />
@@ -238,8 +314,10 @@
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; <span id="current-year">2022</span> YOUR NAME
+                        Copyright &copy; <span id="current-year"></span> Sebastián Cisneros
                     </p>
+                    <a href="https://www.vecteezy.com/free-vector/background-pattern">Background Pattern Vectors by
+                        Vecteezy</a>
                 </div>
                 <div class="col-sm-2 top">
                     <span id="to-top">
@@ -249,22 +327,12 @@
                 <div class="col-sm-5 social">
                     <ul>
                         <li>
-                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                            <a href="https://github.com/scisneros" target="_blank"><i class="fa fa-github"
+                                    aria-hidden="true"></i></a>
                         </li>
                         <li>
-                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            <a href="https://linkedin.com/in/scisnerosp" target="_blank"><i class="fa fa-linkedin"
+                                    aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>

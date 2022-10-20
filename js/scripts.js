@@ -30,7 +30,7 @@
 
         $('html, body').animate({
             scrollTop: scrollDistance + 'px'
-        }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
+        }, Math.abs(window.pageYOffset - scrollDistance) / 3);
 
         // Hide the menu once clicked if mobile
         if ($('header').hasClass('active')) {
@@ -50,7 +50,7 @@
         var scrollDistance = $('#lead').next().offset().top;
         $('html, body').animate({
             scrollTop: scrollDistance + 'px'
-        }, 500);
+        }, 1000);
     });
 
     // Create timeline
@@ -98,3 +98,19 @@
     });
 
 })(jQuery);
+
+function runOnScroll() {
+    if (document.documentElement.scrollTop >= 300) {
+        var menu = document.getElementById("menu");
+        menu.classList.add("shadow-large");
+        var arrow = document.getElementById("lead-down")
+        arrow.style.opacity = "0";
+    }
+    else {
+        var menu = document.getElementById("menu");
+        menu.classList.remove("shadow-large");
+        var arrow = document.getElementById("lead-down")
+        arrow.style.opacity = "1";
+    }
+};
+window.addEventListener("scroll", runOnScroll);
