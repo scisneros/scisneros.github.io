@@ -34,14 +34,15 @@
 */
 
 // Define base and accent colors
-$base-color: #1e3436;
+$base-color: #291e36;
 $base-color-hover: lighten($base-color, 10%);
-$accent-color: #b0426c;
+$accent-color: #c34878;
 $base-white: #f8f8f8;
 
 // Define background colors
 $background: $base-white;
-$background-colored: #43686b;
+$background-colored: #2a1e36;
+// #213536
 // $background-alt: darken($base-white, 3%);
 
 // Define border colors
@@ -49,7 +50,7 @@ $border: #cccccc;
 
 // Define text colors
 $heading: $base-color;
-$text: #68777c;
+$text: #515a5c;
 $text-alt: #61a4a3;
 
 /*
@@ -326,7 +327,6 @@ footer {
 
 .heading {
     position: relative;
-    display: inline-block;
     font-size: 2em;
     font-weight: 300;
     margin: 0 0 30px 0;
@@ -804,6 +804,205 @@ footer {
     color: $base-white;
 }
 
+.experience-container {
+    // background: rgba(30,52,54,0.75);
+    border-radius: 24px;
+}
+
+.experience-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    background: rgba($base-white, 0.03);
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 64px;
+    // border-bottom: 8px solid rgba(0,0,0,0.065);
+    
+    .experience-description {
+        margin-right: 0;
+        margin-left: -56px;
+    }
+
+    /*
+    &:nth-child(odd) {
+        .experience-img-wrapper {
+            order: 1;
+        }
+
+        .experience-content {
+            order: 2;
+        }
+        
+        .experience-title {
+            text-align: left;
+        }
+        
+        .experience-description {
+            margin-right: 0;
+            margin-left: -72px;
+        }
+
+        .experience-badges-container {
+            justify-content: left;
+        }
+    }
+
+    &:nth-child(even) {
+        .experience-img-wrapper {
+            order: 2;
+        }
+
+        .experience-content {
+            order: 1;
+        }
+        
+        .experience-title {
+            text-align: right;
+        }
+        
+        .experience-description {
+            margin-left: 0;
+            margin-right: -72px;
+        }
+
+        .experience-badges-container {
+            justify-content: right;
+        }
+    }
+    */
+
+    .experience-img-wrapper {
+        z-index: 1;
+        transition: box-shadow 200ms;
+        &:hover {
+            z-index: 3;
+            box-shadow: rgba(0,0,0,0.12) 0px 2px 6px 10px, rgba(0,0,0,0.2) 0px 4px 5px 0px
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        border-radius: 8px;
+        opacity: 0.7;
+        transform: scale(1);
+        filter: saturate(0.7);
+        transition: opacity 200ms, transform 200ms, filter 200ms;
+        &:hover {
+            opacity: 1;
+            transform: scale(1.02);
+            filter: saturate(1);
+        }
+    }
+
+    h3 {
+        font-size: 1.5em;
+        font-weight: 600;
+        color: $base-white;
+        display: inline-block;
+        margin: 0;
+    }
+    
+    h4 {
+        display: inline-block;
+        font-size: 1.4em;
+        font-weight: 600;
+        color: $accent-color;
+        margin: 0;
+
+        &::before {
+            content: '@';
+            margin: 0 0.25em;
+        }
+    }
+    
+    p, li {
+        color: $text;
+        font-size: 1em;
+        margin: 0;
+    }
+
+    ul {
+        padding-left: 1.2rem;
+        margin: 0.5rem 0;
+    }
+
+    li::marker {
+        content: '>   ';
+        color: $accent-color;
+        font-weight: 800;
+    }
+    
+    .intern {
+        font-weight: 100;
+        font-size: 1.2rem;
+        color: lighten($text, 20%);
+        &::before {
+            content: '\00a0';
+        }
+    }
+
+    .company-description {
+        color: $text-alt;
+        font-weight: 400;
+        margin-top: 0;
+        margin-bottom: 0.125rem;
+    }
+
+    .experience-date {
+        color: lighten($text, 20%);
+        font-weight: 400;
+        font-size: 0.875em;
+        margin-bottom: 1rem;
+        i {
+            margin-right: 8px;
+        }
+    }
+}
+
+.experience-title {
+}
+
+.experience-content {
+    z-index: 2;
+    width: 50%;
+    padding: 0 24px;
+}
+
+.experience-img-wrapper {
+    z-index: 1;
+    width: 50%;
+    flex-shrink: 0;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px -1px, rgba(0, 0, 0, 0.2) 0px 4px 5px 0px;
+}
+
+.experience-description {
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px 24px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px -1px, rgba(0, 0, 0, 0.2) 0px 4px 5px 0px;
+}
+
+.experience-badges-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.experience-badge {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    padding: 3px 8px;
+    margin: 0px 3px;
+    border-radius: 6px;
+    //background-color: $accent-color;
+    border: 1px solid $accent-color;
+    color: $base-white;
+    font-size: 0.75rem;
+}
+
 /*
     -------------------------------
     ----- 7. Education Styles -----
@@ -826,7 +1025,7 @@ footer {
     z-index: 1;
     max-width: 700px;
     margin: 0 auto 30px auto;
-    padding: 15px;
+    padding: 24px;
     border: 1px solid $border;
     text-align: left;
 
@@ -1245,4 +1444,21 @@ footer {
         }
     }
 
+}
+
+/*
+    ----------------------------------------
+    ----- 13. Other experiences Styles -----
+    ----------------------------------------
+*/
+
+#other {
+    padding: 50px 15px;
+    border-bottom: 1px solid $border;
+    text-align: center;
+
+    h2 {
+        color: $heading;
+        margin-bottom: 50px;
+    }
 }
