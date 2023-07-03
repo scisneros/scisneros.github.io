@@ -15,6 +15,7 @@ gulp.task('serve', function() {
     });
 
     gulp.watch('./scss/*.scss', gulp.series('styles'));
+    gulp.watch('./js/scripts.js', gulp.series('scripts'));
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
 
@@ -35,7 +36,8 @@ gulp.task('scripts', function() {
             }
         }))
         .pipe(rename({extname: '.min.js'}))
-        .pipe(gulp.dest('./js'));
+        .pipe(gulp.dest('./js'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('styles', function () {
